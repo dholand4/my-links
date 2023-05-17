@@ -1,5 +1,5 @@
 * {
-  margin: 10;
+  margin: 10px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -16,21 +16,23 @@ body {
 
 .container {
   text-align: center;
-  width: 320px;
   margin: auto;
+  max-width: 320px;
+  padding: 0 10px;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 img.avatar {
   margin-top: 30px;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  padding: 3.7;
-  border: #cc2649 solid 4px;
+  max-width: 122px;
+  height: auto;
+  padding: 3.7px;
+  border: #046482 solid 4px;
 }
 
 ul {
@@ -56,7 +58,7 @@ ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #cc2649;
+  background: #046482;
   color: white;
   text-transform: uppercase;
   font-size: 14px;
@@ -65,9 +67,8 @@ ul li a {
   transition: background 400ms;
 }
 
-/*pseudo class*/
 ul li a:hover {
-  background: rgb(78, 33, 56);
+  background: #00232E;
 }
 
 footer {
@@ -75,4 +76,62 @@ footer {
   font-size: 12px;
   opacity: 0.6;
   transition: opacity 400ms;
+}
+
+/* Media Query para dispositivos com largura de 1040x2400 pixels */
+@media (min-width: 375px) and (max-width: 1080px) and (max-height: 2400px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  img.avatar {
+    margin-top: 100px;
+    max-width: 350px;
+    padding: 5px; 
+  }
+
+  ul {
+    list-style: none;
+    margin: 60px ;
+  }
+  
+  h1 {
+    font-size: 55px;
+    margin-top: 65px;
+    margin-bottom: 50px;
+  }
+  
+  p {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    opacity: 0.8;
+    font-size: 38px;
+    margin-bottom: -15px;
+  }
+  
+  ul li a {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #046482;
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: background 400ms;
+  }
+  
+  ul li a:hover {
+    background: #00232E;
+  }
+  
+  footer {
+    font-weight: 500;
+    font-size: 26px;
+    opacity: 0.6;
+    transition: opacity 400ms;
+  }
 }
